@@ -12,28 +12,28 @@ build it, automate it, break it, understand it.
 
 ### 🟦 Standard SQS Queue
 
-At-least-once delivery
-Best-effort ordering
-Message attributes
-Delayed messages
-Simple send/receive flows
+- At-least-once delivery
+- Best-effort ordering
+- Message attributes
+- Delayed messages
+- Simple send/receive flows
 
 ### 🔵 FIFO SQS Queue
 
-Strict message ordering
-Exactly-once processing
-Message Group IDs
-Deduplication IDs
-Multi-message batch tests
+- Strict message ordering
+- Exactly-once processing
+- Message Group IDs
+- Deduplication IDs
+- Multi-message batch tests
 
 ### 🛠 Tools & Skills Demonstrated
 
-CloudFormation for consistent, automated queue creation
-Bash scripts with set -euo pipefail for reliability
-AWS CLI commands for sending/receiving messages
-Ruby scripts using aws-sdk-sqs
-Long polling, attributes, delay queues, and ordering logic
-Clear folder structure & reproducible workflows
+- CloudFormation for consistent, automated queue creation
+- Bash scripts with set -euo pipefail for reliability
+- AWS CLI commands for sending/receiving messages
+- Ruby scripts using aws-sdk-sqs
+- Long polling, attributes, delay queues, and ordering logic
+- Clear folder structure & reproducible workflows
 
 ## 📁 Project Structure
 ```
@@ -134,9 +134,9 @@ cd fifo/bin
 This script pushes:
 
 3 messages
-Same message group (Certification)
-Unique deduplication IDs
-Custom attributes
+- Same message group (Certification)
+- Unique deduplication IDs
+- Custom attributes
 
 📥 Receive up to 5 messages
 ```
