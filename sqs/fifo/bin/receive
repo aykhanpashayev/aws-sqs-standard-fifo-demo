@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Receiving a message from the SQS queue..."
+aws sqs receive-message \
+  --queue-url https://sqs.us-east-2.amazonaws.com/000345487584/Queue.fifo \
+  --message-attribute-names All \
+  --max-number-of-messages 5 \
+  --region us-east-2 \
+  --query 'Messages[*].{Body: Body, Attributes: MessageAttributes}'
