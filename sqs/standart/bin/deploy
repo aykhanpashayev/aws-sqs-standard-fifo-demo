@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Usage:
+#   ./deploy [STACK_NAME] [REGION] [TEMPLATE_FILE]
+
+STACK_NAME=${1:-standart-sqs}
+REGION=${2:-us-east-2}
+TEMPLATE_FILE=${3:-template.yaml}
+
+echo "Using stack name: $STACK_NAME"
+echo "Region: $REGION"
+echo "Template: $TEMPLATE_FILE"
+
+echo "Deploying CloudFormation stack..."
+aws cloudformation deploy \
+  --region "$REGION" \
+  --stack-name "$STACK_NAME" \
+  --template-file "$TEMPLATE_FILE"
+echo
+echo "Deployment started (or updated) for stack: $STACK_NAME"
+echo "You can check progress in the CloudFormation console."
