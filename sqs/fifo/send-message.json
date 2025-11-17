@@ -1,0 +1,10 @@
+{
+  "Author": {
+    "DataType": "String",
+    "StringValue": "Aykhan"
+  },
+  "Category": {
+    "DataType": "String",
+    "StringValue": "Certification"
+  }
+}
