@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Sending a message to the SQS queue..."
+
+aws sqs send-message \
+  --queue-url https://sqs.us-east-2.amazonaws.com/000345487584/StandartQueue \
+  --message-body "AWS Solutions Architect Associate Certification coming very soon!" \
+  --delay-seconds 10 \
+  --message-attributes file://send-message.json \
+  --region us-east-2
